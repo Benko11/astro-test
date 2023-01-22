@@ -1,4 +1,6 @@
 ---
+const name = 'Benjamin Bergstrom';
+const skills = ['Laravel', 'NodeJS', 'JavaScript', 'ReactJS', 'Git', 'Astro'];
 ---
 
 <html lang="en">
@@ -8,6 +10,12 @@
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>Astro</title>
+        <style>
+            h1 {
+                color: purple;
+                font-size: 4rem;
+            }
+        </style>
     </head>
     <body>
         <a href="/">Home</a>
@@ -15,6 +23,12 @@
         <a href="/about">About</a>
 
         <h1>About Me</h1>
+        <p>My name is {name}</p>
+
+        <h2>Skills</h2>
+        <ul>
+            {skills.map((skill) => <li>{skill}</li>)}
+        </ul>
         <p>PS I am gay</p>
     </body>
 </html>
