@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Header from '../components/Header.astro';
 
 const name = 'Benjamin Bergstrom';
 const skills = ['Laravel', 'NodeJS', 'JavaScript', 'ReactJS', 'Git', 'Astro'];
@@ -29,9 +30,7 @@ const skillTransform = 'uppercase';
         </style>
     </head>
     <body>
-        <a href="/">Home</a>
-        <a href="/blog">Blog</a>
-        <a href="/about">About</a>
+        <Header />
 
         <h1>About Me</h1>
         <p>My name is {name}</p>
@@ -41,5 +40,9 @@ const skillTransform = 'uppercase';
             {skills.map((skill) => <li class="skill">{skill}</li>)}
         </ul>
         <p>PS I am gay</p>
+
+        <script>
+            import '../scripts/menu.js';
+        </script>
     </body>
 </html>
